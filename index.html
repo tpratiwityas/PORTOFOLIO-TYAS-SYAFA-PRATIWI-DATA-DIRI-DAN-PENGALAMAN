@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio – Tyas Syafa Pratiwi. Mahasiswa Pendidikan Teknologi Informasi Universitas Lampung dengan minat pada UI/UX Design, Desain Digital, dan Web & Game Development." />
+  <title>Personal Portfolio – Tyas Syafa Pratiwi</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. VARIABEL & KONFIGURASI DESAIN (MODERN MINIMALIST)
+       ========================================================================== */
+    :root {
+      /* Palet Warna Harmonis */
+      --bg-primary: #FAFAFC;          /* Off-white bersih */
+      --bg-secondary: #FFFFFF;        /* Putih murni untuk card */
+      --bg-subtle: #F2F4F8;           /* Abu-abu lembut untuk variasi section */
+      
+      --color-navy: #0F172A;          /* Warna Utama: Deep Navy / Charcoal */
+      --color-navy-light: #1E293B;    /* Navy sekunder */
+      --color-accent: #6366F1;        /* Warna Aksen: Muted Indigo / Lavender */
+      --color-accent-soft: #EEF2FF;   /* Soft Lavender tint */
+      --color-accent-hover: #4F46E5;  /* Hover aksen */
+      
+      --text-primary: #1E293B;        /* Hitam lembut */
+      --text-secondary: #475569;      /* Dark gray untuk paragraf */
+      --text-muted: #64748B;          /* Muted gray untuk label */
+      
+      --border-color: #E2E8F0;        /* Garis pembatas halus */
+      --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 12px 28px rgba(15, 23, 42, 0.07);
+      --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.09);
+
+      /* Tipografi */
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Ukuran & Transisi */
+      --container-max: 1140px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--color-navy);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-alt {
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Header Section Reusable */
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 52px;
+    }
+
+    .section-header.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      background-color: var(--color-accent-soft);
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3vw, 2.4rem);
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+    }
+
+    /* ==========================================================================
+       3. TOMBOL KONSISTEN (BUTTONS)
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--color-navy);
+      color: #FFFFFF;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.14);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(99, 102, 241, 0.25);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--color-navy);
+      border-color: var(--border-color);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-navy);
+      background-color: var(--bg-subtle);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 10px 18px;
+      font-size: 0.88rem;
+    }
+
+    .btn svg {
+      width: 17px;
+      height: 17px;
+      transition: transform 0.25s ease;
+    }
+
+    .btn:hover svg.arrow-icon {
+      transform: translateX(3px);
+    }
+
+    /* ==========================================================================
+       4. NAVBAR RESPONSIF
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(250, 250, 252, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      border-bottom-color: var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--color-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-logo span {
+      color: var(--color-accent);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      font-family: var(--font-heading);
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 6px 0;
+      transition: var(--transition);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-navy);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Hamburger Mobile Button */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--color-navy);
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION (HOME)
+       ========================================================================== */
+    .hero {
+      padding-top: 145px;
+      padding-bottom: 96px;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .hero-greeting {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-greeting::before {
+      content: '';
+      width: 28px;
+      height: 2px;
+      background-color: var(--color-accent);
+      display: inline-block;
+    }
+
+    .hero-name {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      color: var(--color-navy);
+    }
+
+    .hero-role {
+      font-family: var(--font-heading);
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 22px;
+    }
+
+    .hero-desc {
+      font-size: 1.04rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Foto Profil Portrait Elegan */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .photo-frame {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3 / 4;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, #EEF2FF 0%, #E2E8F0 100%);
+      padding: 10px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 1.5px dashed rgba(99, 102, 241, 0.35);
+      border-radius: calc(var(--radius-lg) + 6px);
+      z-index: -1;
+    }
+
+    .photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: calc(var(--radius-lg) - 6px);
+      overflow: hidden;
+      background-color: #F8FAFC;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Placeholder rapi jika foto-tyas.jpg belum tersedia */
+    .photo-placeholder {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(160deg, #F8FAFC 0%, #EEF2FF 100%);
+      color: var(--text-muted);
+    }
+
+    .photo-placeholder .initials-badge {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background-color: var(--color-navy);
+      color: #FFFFFF;
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .photo-placeholder p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 4px;
+    }
+
+    .photo-placeholder span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       6. ABOUT ME SECTION
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      font-size: 1.03rem;
+      margin-bottom: 18px;
+    }
+
+    .about-info-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .info-item {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .info-label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-weight: 600;
+      color: var(--color-navy);
+      font-size: 0.96rem;
+    }
+
+    /* ==========================================================================
+       7. PORTFOLIO CATEGORIES SECTION (4 KATEGORI UTAMA)
+       ========================================================================== */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .category-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(99, 102, 241, 0.35);
+    }
+
+    .category-thumb {
+      height: 180px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .category-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .category-card:hover .category-thumb img {
+      transform: scale(1.04);
+    }
+
+    /* Visual Placeholder Elegan per Kategori */
+    .thumb-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .thumb-fallback.cat-1 { background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%); }
+    .thumb-fallback.cat-2 { background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%); }
+    .thumb-fallback.cat-3 { background: linear-gradient(135deg, #ECFDF5 0%, #E0F2FE 100%); }
+    .thumb-fallback.cat-4 { background: linear-gradient(135deg, #FAF5FF 0%, #EEF2FF 100%); }
+
+    .category-number {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background-color: rgba(15, 23, 42, 0.85);
+      color: #FFFFFF;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .category-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .category-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .category-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: var(--color-accent-soft);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .category-title {
+      font-size: 1.25rem;
+    }
+
+    .category-desc {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .drive-root-banner {
+      margin-top: 36px;
+      padding: 22px 28px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .drive-root-banner p {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+    }
+
+    .drive-root-banner strong {
+      color: var(--color-navy);
+    }
+
+    /* ==========================================================================
+       8. FEATURED PROJECTS SECTION
+       ========================================================================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .project-preview {
+      aspect-ratio: 16 / 9;
+      background-color: var(--bg-subtle);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .project-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-preview img {
+      transform: scale(1.04);
+    }
+
+    .preview-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(145deg, #F8FAFC 0%, #EEF2FF 100%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .project-content {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-tag {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    /* ==========================================================================
+       9. CERTIFICATES GALLERY SECTION
+       ========================================================================== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cert-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .cert-image {
+      aspect-ratio: 4 / 3;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-color);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cert-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cert-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .cert-date {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+    }
+
+    .cert-title {
+      font-size: 1.06rem;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    /* ==========================================================================
+       10. CONTACT SECTION
+       ========================================================================== */
+    .contact-wrapper {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .contact-title {
+      font-size: clamp(1.75rem, 3vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+
+    .contact-desc {
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      border-color: var(--color-accent);
+      transform: translateX(4px);
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background-color: var(--color-accent-soft);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .contact-item-text strong,
+    .contact-item-text a {
+      font-size: 0.95rem;
+      color: var(--color-navy);
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-primary);
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 6px;
+    }
+
+    .footer-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       12. ANIMASI FADE-IN HALUS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       13. RESPONSIVE MEDIA QUERIES (TABLET & SMARTPHONE)
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+        text-align: left;
+      }
+
+      .hero-visual {
+        order: -1;
+        justify-content: flex-start;
+      }
+
+      .photo-frame {
+        max-width: 260px;
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 18px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-130%);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+      }
+
+      .nav-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .portfolio-grid,
+      .projects-grid,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrapper {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       NAVBAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="Tyas Syafa Pratiwi Home">
+        TSP<span>.</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav aria-label="Navigasi Utama">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION (HOME)
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Tyas Syafa Pratiwi</h1>
+          <p class="hero-role">Information Technology Education Student</p>
+          <p class="hero-desc">
+            Mahasiswa Pendidikan Teknologi Informasi yang memiliki ketertarikan pada desain digital, UI/UX design, pengembangan web, dan teknologi kreatif. Memiliki semangat untuk terus belajar, mengembangkan keterampilan, serta menghasilkan karya yang kreatif dan bermanfaat.
+          </p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">
+              Explore My Work
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <!-- GANTI HREF DI BAWAH INI DENGAN LINK GOOGLE DRIVE FILE CV ANDA -->
+            <a href="https://drive.google.com/drive/folders/1lFsbfPoy-nhf5IZXUsQTqUc9i5VQZLf7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- FOTO PROFIL PORTRAIT (Simpan foto Anda dengan nama foto-tyas.jpg di folder yang sama) -->
+        <div class="hero-visual reveal">
+          <div class="photo-frame">
+            <div class="photo-inner">
+              <img 
+                src="foto-tyas.jpg" 
+                alt="Foto Profil Tyas Syafa Pratiwi" 
+                loading="eager"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <!-- Placeholder Otomatis jika foto-tyas.jpg belum ditambahkan -->
+              <div class="photo-placeholder">
+                <div class="initials-badge">TSP</div>
+                <p>Tyas Syafa Pratiwi</p>
+                <span>Letakkan file <strong>foto-tyas.jpg</strong> di folder website</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT ME SECTION
+         ====================================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Perkenalan Singkat &amp; Latar Belakang</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Saya merupakan mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung yang memiliki ketertarikan pada dunia desain digital, teknologi, dan pengembangan aplikasi berbasis web. Saya senang mempelajari hal baru, mengeksplorasi ide kreatif, serta mengembangkan kemampuan melalui berbagai proyek akademik maupun mandiri.
+            </p>
+            <p>
+              Saya memiliki pengalaman dalam membuat desain grafis, merancang antarmuka menggunakan Figma, mengerjakan proyek pengembangan game berbasis web, serta berkolaborasi dalam proyek akademik. Saya terus berupaya meningkatkan keterampilan dan memperluas pengalaman untuk menghasilkan karya yang lebih baik.
+            </p>
+          </div>
+
+          <aside class="about-info-card reveal" aria-label="Informasi Akademik dan Minat">
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-label">Education</span>
+                <span class="info-value">Universitas Lampung</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Major</span>
+                <span class="info-value">Information Technology Education</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Bandar Lampung, Indonesia</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Interest</span>
+                <span class="info-value">Graphic Design, UI/UX Design, Web Development, Game Development</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PORTFOLIO CATEGORIES SECTION (GOOGLE DRIVE REPOSITORY)
+         ====================================================================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Eksplorasi Karya &amp; Dokumentasi</h2>
+          <p class="section-subtitle">
+            Seluruh arsip proyek dikelompokkan ke dalam empat kategori utama yang terhubung langsung ke folder Google Drive masing-masing.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- KATEGORI 01 – DESIGN -->
+          <article class="category-card reveal">
+            <div class="category-thumb">
+              <span class="category-number">01</span>
+              <img 
+                src="thumb-desain.jpg" 
+                alt="Thumbnail Kategori Desain Grafis" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="thumb-fallback cat-1" style="display: none;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+                <span style="font-size: 0.82rem; font-weight: 600; color: #475569;">Poster • Banner • Product Design</span>
+              </div>
+            </div>
+            <div class="category-body">
+              <div class="category-title-row">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="13.5" cy="6.5" r=".5"></circle>
+                    <circle cx="17.5" cy="10.5" r=".5"></circle>
+                    <circle cx="8.5" cy="7.5" r=".5"></circle>
+                    <circle cx="6.5" cy="12.5" r=".5"></circle>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-title">01 – Design</h3>
+              </div>
+              <p class="category-desc">
+                Selected graphic design projects, visual branding, posters, banners, and creative product designs.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/12Qs_uAK6cQny2hC8OfrcaWAMiXFTQgqs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  View Projects
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- KATEGORI 02 – UI/UX DESIGN -->
+          <article class="category-card reveal">
+            <div class="category-thumb">
+              <span class="category-number">02</span>
+              <img 
+                src="thumb-uiux.jpg" 
+                alt="Thumbnail Kategori UI/UX Design" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="thumb-fallback cat-2" style="display: none;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span style="font-size: 0.82rem; font-weight: 600; color: #475569;">Figma Projects • UI Design • Prototype</span>
+              </div>
+            </div>
+            <div class="category-body">
+              <div class="category-title-row">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h3 class="category-title">02 – UI/UX Design</h3>
+              </div>
+              <p class="category-desc">
+                User interface and user experience projects, including interface exploration, layout design, and digital product concepts created using Figma.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1aUgXjQpRSxu6fzFrK8t6UFnJGNzxUDLC?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  View Projects
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- KATEGORI 03 – WEB & GAME DEVELOPMENT -->
+          <article class="category-card reveal">
+            <div class="category-thumb">
+              <span class="category-number">03</span>
+              <img 
+                src="thumb-webgame.jpg" 
+                alt="Thumbnail Kategori Web & Game Development" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="thumb-fallback cat-3" style="display: none;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span style="font-size: 0.82rem; font-weight: 600; color: #475569;">Web Projects • 3D Game • Documentation</span>
+              </div>
+            </div>
+            <div class="category-body">
+              <div class="category-title-row">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="category-title">03 – Web &amp; Game Development</h3>
+              </div>
+              <p class="category-desc">
+                Web-based projects and interactive digital experiences, including personal development projects and 3D web-based games.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  View Projects
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- KATEGORI 04 – CERTIFICATES -->
+          <article class="category-card reveal">
+            <div class="category-thumb">
+              <span class="category-number">04</span>
+              <img 
+                src="thumb-sertifikat.jpg" 
+                alt="Thumbnail Kategori Certificates" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="thumb-fallback cat-4" style="display: none;">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span style="font-size: 0.82rem; font-weight: 600; color: #475569;">Training • Workshop • Certification</span>
+              </div>
+            </div>
+            <div class="category-body">
+              <div class="category-title-row">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </div>
+                <h3 class="category-title">04 – Certificates</h3>
+              </div>
+              <p class="category-desc">
+                Certificates of participation, training programs, workshops, and learning experiences that support my personal and professional development.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  View Projects
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- LINK INDUK FOLDER GOOGLE DRIVE -->
+        <div class="drive-root-banner reveal">
+          <p>Ingin melihat keseluruhan struktur direktori karya dalam satu tempat? Akses <strong>Folder Induk Portofolio Google Drive</strong>.</p>
+          <a href="https://drive.google.com/drive/folders/1lFsbfPoy-nhf5IZXUsQTqUc9i5VQZLf7?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Open Main Drive Folder
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SECTION
+         ====================================================================== -->
+    <section class="section section-alt" id="featured">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Projects</span>
+          <h2 class="section-title">Karya Pilihan &amp; Eksplorasi</h2>
+          <p class="section-subtitle">
+            Beberapa sorotan proyek desain, antarmuka pengguna, dan pengembangan aplikasi web yang telah dikerjakan.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- FEATURED PROJECT 1 -->
+          <article class="project-card reveal">
+            <div class="project-preview">
+              <!-- Ganti src="project-1.jpg" dengan file gambar karya Anda -->
+              <img 
+                src="project-1.jpg" 
+                alt="Preview Visual Branding & Poster Design" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>Preview Karya (project-1.jpg)</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Graphic Design</span>
+              <h3 class="project-title">Visual Campaign &amp; Poster Series</h3>
+              <p class="project-desc">
+                Eksplorasi desain komunikasi visual berupa poster publikasi, banner kegiatan, dan identitas visual produk dengan komposisi tipografi modern.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/12Qs_uAK6cQny2hC8OfrcaWAMiXFTQgqs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FEATURED PROJECT 2 -->
+          <article class="project-card reveal">
+            <div class="project-preview">
+              <!-- Ganti src="project-2.jpg" dengan file gambar karya Anda -->
+              <img 
+                src="project-2.jpg" 
+                alt="Preview UI/UX Design Figma" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>Preview Karya (project-2.jpg)</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">UI/UX Design</span>
+              <h3 class="project-title">Digital Product Interface &amp; Prototype</h3>
+              <p class="project-desc">
+                Perancangan antarmuka pengguna dan alur pengalaman (user flow) interaktif berbasis Figma yang berfokus pada kemudahan navigasi dan estetika bersih.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1aUgXjQpRSxu6fzFrK8t6UFnJGNzxUDLC?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FEATURED PROJECT 3 -->
+          <article class="project-card reveal">
+            <div class="project-preview">
+              <!-- Ganti src="project-3.jpg" dengan file gambar karya Anda -->
+              <img 
+                src="project-3.jpg" 
+                alt="Preview 3D Web-Based Game" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>Preview Karya (project-3.jpg)</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Game Development</span>
+              <h3 class="project-title">3D Web-Based Interactive Game</h3>
+              <p class="project-desc">
+                Pengembangan gim interaktif 3D berbasis web yang menggabungkan logika pemrograman, desain lingkungan visual, dan pengalaman bermain di browser.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FEATURED PROJECT 4 -->
+          <article class="project-card reveal">
+            <div class="project-preview">
+              <!-- Ganti src="project-4.jpg" dengan file gambar karya Anda -->
+              <img 
+                src="project-4.jpg" 
+                alt="Preview Web Development Project" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                <span>Preview Karya (project-4.jpg)</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Web Development</span>
+              <h3 class="project-title">Responsive Web Application Project</h3>
+              <p class="project-desc">
+                Pengembangan website responsif dan sistem informasi berbasis web untuk kebutuhan proyek akademik maupun eksplorasi teknologi front-end modern.
+              </p>
+              <div>
+                <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CERTIFICATES GALLERY SECTION
+         ====================================================================== -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="section-tag">Certificates</span>
+          <h2 class="section-title">Sertifikat &amp; Pelatihan</h2>
+          <p class="section-subtitle">
+            Dokumentasi partisipasi pelatihan, workshop, dan program sertifikasi pengembangan kompetensi.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- SERTIFIKAT 1 -->
+          <article class="cert-card reveal">
+            <div class="cert-image">
+              <!-- Ganti src="cert-1.jpg" dengan gambar sertifikat Anda -->
+              <img 
+                src="cert-1.jpg" 
+                alt="Sertifikat Pelatihan UI/UX Design" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>Sertifikat 01 (cert-1.jpg)</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Training Program</span>
+              <h3 class="cert-title">UI/UX Design &amp; Digital Prototyping Training</h3>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERTIFIKAT 2 -->
+          <article class="cert-card reveal">
+            <div class="cert-image">
+              <!-- Ganti src="cert-2.jpg" dengan gambar sertifikat Anda -->
+              <img 
+                src="cert-2.jpg" 
+                alt="Sertifikat Workshop Web Development" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>Sertifikat 02 (cert-2.jpg)</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Workshop</span>
+              <h3 class="cert-title">Web &amp; Interactive Technology Workshop</h3>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SERTIFIKAT 3 -->
+          <article class="cert-card reveal">
+            <div class="cert-image">
+              <!-- Ganti src="cert-3.jpg" dengan gambar sertifikat Anda -->
+              <img 
+                src="cert-3.jpg" 
+                alt="Sertifikat Kompetensi Desain Digital" 
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="preview-placeholder" style="display: none;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>Sertifikat 03 (cert-3.jpg)</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date">Certification</span>
+              <h3 class="cert-title">Creative Graphic Design &amp; Digital Media</h3>
+              <div>
+                <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-wrapper reveal">
+          <div>
+            <span class="section-tag">Contact</span>
+            <h2 class="contact-title">Mari Terhubung &amp; Berkolaborasi</h2>
+            <p class="contact-desc">
+              Terbuka untuk peluang magang, proyek kolaborasi desain UI/UX, pengembangan web, maupun diskusi seputar teknologi kreatif.
+            </p>
+            <!-- GANTI EMAIL PADA mailto: DI BAWAH INI -->
+            <a href="mailto:tyas.email@example.com" class="btn btn-primary">
+              Get in Touch
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="contact-details">
+            <!-- EMAIL -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>Email</span>
+                <!-- GANTI ALAMAT EMAIL ANDA DI SINI -->
+                <a href="mailto:tyas.email@example.com">[MASUKKAN EMAIL ANDA]</a>
+              </div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>Location</span>
+                <strong>Bandar Lampung, Indonesia</strong>
+              </div>
+            </div>
+
+            <!-- INSTAGRAM -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>Instagram</span>
+                <!-- GANTI LINK INSTAGRAM DI SINI -->
+                <a href="#" target="_blank" rel="noopener noreferrer">[MASUKKAN LINK INSTAGRAM]</a>
+              </div>
+            </div>
+
+            <!-- LINKEDIN -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>LinkedIn</span>
+                <!-- GANTI LINK LINKEDIN DI SINI -->
+                <a href="#" target="_blank" rel="noopener noreferrer">[MASUKKAN LINK LINKEDIN]</a>
+              </div>
+            </div>
+
+            <!-- GITHUB -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>GitHub</span>
+                <!-- GANTI LINK GITHUB DI SINI -->
+                <a href="#" target="_blank" rel="noopener noreferrer">[MASUKKAN LINK GITHUB]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">&copy; 2026 Tyas Syafa Pratiwi. All Rights Reserved.</p>
+      <p class="footer-sub">Designed &amp; Developed with care.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT MURNI (NAVIGASI MOBILE, ACTIVE LINK, & ANIMASI SCROLL)
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section[id]');
+
+      // 1. Toggle Mobile Menu
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Tutup menu mobile saat salah satu tautan diklik
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // 2. Efek Shadow Navbar & Penanda Menu Aktif saat Scroll
+      const handleScroll = () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+
+        let currentSection = 'home';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 130;
+          if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // 3. Animasi Fade-In Halus dengan IntersectionObserver
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+  </script>
+</body>
+</html>
