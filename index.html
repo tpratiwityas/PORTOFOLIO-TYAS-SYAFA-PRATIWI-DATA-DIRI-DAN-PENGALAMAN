@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal Portfolio – Tyas Syafa Pratiwi. Mahasiswa Pendidikan Teknologi Informasi Universitas Lampung dengan minat pada UI/UX Design, Desain Digital, dan Web & Game Development." />
+  <meta name="description" content="Personal Portfolio – Tyas Syafa Pratiwi. Mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung dengan minat pada administrasi, teknologi informasi, dan keterampilan digital." />
   <title>Personal Portfolio – Tyas Syafa Pratiwi</title>
 
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
@@ -13,24 +13,25 @@
 
   <style>
     /* ==========================================================================
-       1. VARIABEL WARNA & DESAIN (SELARAS DENGAN FOTO: DARK ESPRESSO & CRIMSON)
+       1. VARIABEL WARNA & DESAIN (DARK ESPRESSO & CRIMSON)
        ========================================================================== */
     :root {
-      --bg-primary: #121010;          /* Deep Charcoal-Espresso (Gelap elegan, tidak putih) */
-      --bg-secondary: #1A1615;        /* Dark Mocha Surface untuk section alternatif */
-      --bg-card: #221D1B;             /* Warm Dark Card */
-      --bg-card-hover: #2A2421;       /* Hover kartu */
+      --bg-primary: #121010;
+      --bg-secondary: #1A1615;
+      --bg-card: #221D1B;
+      --bg-card-hover: #2A2421;
       
-      --color-crimson: #D93829;       /* Warna Aksen Utama: Crimson Red (senada latar foto) */
-      --color-crimson-hover: #EF4434; /* Hover crimson terang */
+      --color-crimson: #D93829;
+      --color-crimson-hover: #EF4434;
       --color-crimson-soft: rgba(217, 56, 41, 0.16);
-      --color-taupe: #C8A27C;         /* Aksen Hangat: Warm Taupe (senada warna pakaian) */
+      --color-taupe: #C8A27C;
+      --color-taupe-soft: rgba(200, 162, 124, 0.14);
       
-      --text-primary: #F5F0EC;        /* Off-white hangat untuk judul */
-      --text-secondary: #C7BEB8;      /* Warm light gray untuk paragraf */
-      --text-muted: #948982;          /* Muted taupe-gray untuk label */
+      --text-primary: #F5F0EC;
+      --text-secondary: #C7BEB8;
+      --text-muted: #948982;
       
-      --border-color: #332B28;        /* Garis pembatas hangat */
+      --border-color: #332B28;
       --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.28);
       --shadow-md: 0 14px 32px rgba(0, 0, 0, 0.42);
       --shadow-lg: 0 22px 48px rgba(217, 56, 41, 0.18);
@@ -249,12 +250,12 @@
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 26px;
     }
 
     .nav-link {
       font-family: var(--font-heading);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--text-secondary);
       position: relative;
@@ -359,7 +360,7 @@
       gap: 14px;
     }
 
-    /* Foto Profil Portrait Elegan (Senada dengan Latar Merah & Pakaian Cokelat) */
+    /* Foto Profil Portrait Elegan */
     .hero-visual {
       display: flex;
       justify-content: center;
@@ -437,11 +438,11 @@
     }
 
     /* ==========================================================================
-       6. ABOUT ME SECTION
+       6. ABOUT ME & EDUCATION SECTION
        ========================================================================== */
     .about-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 44px;
       align-items: start;
     }
@@ -461,14 +462,41 @@
       box-shadow: var(--shadow-md);
     }
 
+    .edu-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .edu-card-title {
+      font-size: 1.15rem;
+      color: #FFFFFF;
+    }
+
+    .edu-period-badge {
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--color-taupe);
+      background-color: var(--color-taupe-soft);
+      border: 1px solid rgba(200, 162, 124, 0.3);
+      padding: 4px 11px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+
     .info-list {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 16px;
     }
 
     .info-item {
-      padding-bottom: 14px;
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -480,7 +508,7 @@
     .info-label {
       display: block;
       font-family: var(--font-heading);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -491,11 +519,152 @@
     .info-value {
       font-weight: 600;
       color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================================================
+       7. EXPERIENCE SECTION (KEPANITIAAN & PENGABDIAN MASYARAKAT)
+       ========================================================================== */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .exp-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--color-crimson), var(--color-taupe));
+    }
+
+    .exp-card:hover {
+      transform: translateY(-5px);
+      background-color: var(--bg-card-hover);
+      border-color: var(--color-taupe);
+    }
+
+    .exp-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .exp-role-badge {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-crimson-hover);
+      background-color: var(--color-crimson-soft);
+      border: 1px solid rgba(217, 56, 41, 0.3);
+      padding: 5px 12px;
+      border-radius: 99px;
+    }
+
+    .exp-title {
+      font-size: 1.24rem;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .exp-desc {
+      color: var(--text-secondary);
       font-size: 0.96rem;
     }
 
     /* ==========================================================================
-       7. PORTFOLIO CATEGORIES SECTION (4 KATEGORI GOOGLE DRIVE)
+       8. SKILLS SECTION (SOFT SKILLS & DIGITAL/TECHNICAL SKILLS)
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .skill-category-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .skill-category-card:hover {
+      border-color: var(--color-crimson);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .skill-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background-color: var(--color-crimson-soft);
+      color: var(--color-crimson-hover);
+      border: 1px solid rgba(217, 56, 41, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .skill-card-title {
+      font-size: 1.22rem;
+      color: #FFFFFF;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-pill {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .skill-pill:hover {
+      border-color: var(--color-taupe);
+      color: var(--color-taupe);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       9. PORTFOLIO CATEGORIES SECTION (4 KATEGORI GOOGLE DRIVE)
        ========================================================================== */
     .portfolio-grid {
       display: grid;
@@ -557,7 +726,7 @@
       font-size: 0.8rem;
       font-weight: 700;
       color: var(--color-taupe);
-      background-color: rgba(200, 162, 124, 0.12);
+      background-color: var(--color-taupe-soft);
       border: 1px solid rgba(200, 162, 124, 0.28);
       padding: 5px 12px;
       border-radius: 99px;
@@ -600,7 +769,7 @@
     }
 
     /* ==========================================================================
-       8. FEATURED PROJECTS SECTION
+       10. FEATURED PROJECTS SECTION
        ========================================================================== */
     .projects-grid {
       display: grid;
@@ -639,7 +808,7 @@
       font-size: 0.76rem;
       font-weight: 700;
       color: var(--color-taupe);
-      background-color: rgba(200, 162, 124, 0.14);
+      background-color: var(--color-taupe-soft);
       border: 1px solid rgba(200, 162, 124, 0.3);
       padding: 5px 12px;
       border-radius: 99px;
@@ -661,20 +830,20 @@
     }
 
     /* ==========================================================================
-       9. CERTIFICATES GALLERY SECTION
+       11. CERTIFICATES SECTION (7 SERTIFIKAT RESMI - TANPA GAMBAR FIKTIF)
        ========================================================================== */
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .cert-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-top: 4px solid var(--color-crimson);
+      border-top: 3px solid var(--color-crimson);
       border-radius: var(--radius-md);
-      padding: 26px;
+      padding: 24px;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
       display: flex;
@@ -684,39 +853,63 @@
     .cert-card:hover {
       transform: translateY(-5px);
       background-color: var(--bg-card-hover);
+      border-color: var(--color-taupe);
       box-shadow: var(--shadow-md);
     }
 
+    .cert-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
     .cert-icon-wrap {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       background-color: var(--color-crimson-soft);
       color: var(--color-crimson-hover);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      flex-shrink: 0;
     }
 
     .cert-date {
-      font-size: 0.8rem;
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--color-taupe);
-      margin-bottom: 8px;
+      background-color: var(--color-taupe-soft);
+      padding: 4px 10px;
+      border-radius: 99px;
     }
 
     .cert-title {
-      font-size: 1.08rem;
-      margin-bottom: 20px;
-      flex-grow: 1;
+      font-size: 1.04rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
       color: #FFFFFF;
+      flex-grow: 1;
+    }
+
+    .cert-issuer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .cert-footer-action {
+      margin-top: 32px;
+      text-align: center;
     }
 
     /* ==========================================================================
-       10. CONTACT SECTION
+       12. CONTACT SECTION
        ========================================================================== */
     .contact-wrapper {
       background-color: var(--bg-card);
@@ -802,7 +995,7 @@
     }
 
     /* ==========================================================================
-       11. FOOTER
+       13. FOOTER
        ========================================================================== */
     .footer {
       padding: 38px 0;
@@ -826,7 +1019,7 @@
     }
 
     /* ==========================================================================
-       12. ANIMASI FADE-IN HALUS
+       14. ANIMASI FADE-IN HALUS
        ========================================================================== */
     .reveal {
       opacity: 0;
@@ -840,7 +1033,7 @@
     }
 
     /* ==========================================================================
-       13. RESPONSIVE MEDIA QUERIES (TABLET & SMARTPHONE)
+       15. RESPONSIVE MEDIA QUERIES (TABLET & SMARTPHONE)
        ========================================================================== */
     @media (max-width: 960px) {
       .hero-grid,
@@ -900,6 +1093,8 @@
         pointer-events: auto;
       }
 
+      .exp-grid,
+      .skills-grid,
       .portfolio-grid,
       .projects-grid,
       .cert-grid {
@@ -935,6 +1130,8 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
           <li><a href="#certificates" class="nav-link">Certificates</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -954,7 +1151,7 @@
           <h1 class="hero-name">Tyas Syafa Pratiwi</h1>
           <p class="hero-role">Information Technology Education Student</p>
           <p class="hero-desc">
-            Mahasiswa Pendidikan Teknologi Informasi yang memiliki ketertarikan pada desain digital, UI/UX design, pengembangan web, dan teknologi kreatif. Memiliki semangat untuk terus belajar, mengembangkan keterampilan, serta menghasilkan karya yang kreatif dan bermanfaat.
+            Mahasiswa Pendidikan Teknologi Informasi Universitas Lampung yang berfokus pada pengembangan keterampilan digital, administrasi, koordinasi tim, serta eksplorasi desain UI/UX dan teknologi web.
           </p>
           <div class="hero-actions">
             <a href="#portfolio" class="btn btn-primary">
@@ -997,42 +1194,46 @@
     </section>
 
     <!-- ======================================================================
-         ABOUT ME SECTION
+         ABOUT ME & EDUCATION SECTION
          ====================================================================== -->
     <section class="section section-alt" id="about">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">About Me</span>
-          <h2 class="section-title">Perkenalan Singkat &amp; Latar Belakang</h2>
+          <h2 class="section-title">Profil Singkat &amp; Pendidikan</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-text reveal">
             <p>
-              Saya merupakan mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung yang memiliki ketertarikan pada dunia desain digital, teknologi, dan pengembangan aplikasi berbasis web. Saya senang mempelajari hal baru, mengeksplorasi ide kreatif, serta mengembangkan kemampuan melalui berbagai proyek akademik maupun mandiri.
+              Saya adalah mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung yang memiliki pengalaman dalam kegiatan kepanitiaan dan pengabdian masyarakat. Saya memiliki kemampuan komunikasi, koordinasi, administrasi, serta kerja sama tim yang baik.
             </p>
             <p>
-              Saya memiliki pengalaman dalam membuat desain grafis, merancang antarmuka menggunakan Figma, mengerjakan proyek pengembangan game berbasis web, serta berkolaborasi dalam proyek akademik. Saya terus berupaya meningkatkan keterampilan dan memperluas pengalaman untuk menghasilkan karya yang lebih baik.
+              Terbiasa bekerja secara terstruktur, menyelesaikan tanggung jawab, dan berkoordinasi dengan berbagai pihak. Saya juga memiliki ketertarikan pada bidang teknologi informasi, administrasi, dan pengembangan keterampilan digital untuk terus berkembang secara profesional.
             </p>
           </div>
 
-          <aside class="about-info-card reveal" aria-label="Informasi Akademik dan Minat">
+          <aside class="about-info-card reveal" aria-label="Informasi Pendidikan">
+            <div class="edu-card-header">
+              <h3 class="edu-card-title">Education</h3>
+              <span class="edu-period-badge">2025 – Sekarang</span>
+            </div>
             <ul class="info-list">
               <li class="info-item">
-                <span class="info-label">Education</span>
-                <span class="info-value">Universitas Lampung</span>
+                <span class="info-label">Universitas</span>
+                <span class="info-value">Universitas Lampung (UNILA)</span>
               </li>
               <li class="info-item">
-                <span class="info-label">Major</span>
-                <span class="info-value">Information Technology Education</span>
+                <span class="info-label">Program Studi</span>
+                <span class="info-value">S1 Pendidikan Teknologi Informasi</span>
               </li>
               <li class="info-item">
-                <span class="info-label">Location</span>
+                <span class="info-label">Fakultas</span>
+                <span class="info-value">Keguruan dan Ilmu Pendidikan</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Domisili</span>
                 <span class="info-value">Bandar Lampung, Indonesia</span>
-              </li>
-              <li class="info-item">
-                <span class="info-label">Interest</span>
-                <span class="info-value">Graphic Design, UI/UX Design, Web Development, Game Development</span>
               </li>
             </ul>
           </aside>
@@ -1041,7 +1242,108 @@
     </section>
 
     <!-- ======================================================================
-         PORTFOLIO CATEGORIES SECTION (4 KATEGORI GOOGLE DRIVE)
+         EXPERIENCE SECTION (KEPANITIAAN & PENGABDIAN MASYARAKAT)
+         ====================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Pengalaman Kepanitiaan &amp; Pengabdian</h2>
+          <p class="section-subtitle">
+            Kontribusi aktif dalam organisasi kemahasiswaan dan program pemberdayaan masyarakat berbasis teknologi.
+          </p>
+        </div>
+
+        <div class="exp-grid">
+          <!-- EXPERIENCE 1 -->
+          <article class="exp-card reveal">
+            <div class="exp-meta">
+              <span class="exp-role-badge">Panitia • 2026</span>
+            </div>
+            <h3 class="exp-title">IMPRESSION X SPECTA 2026</h3>
+            <p class="exp-desc">
+              Menjalankan tanggung jawab kepanitiaan mahasiswa melalui koordinasi lintas divisi, persiapan teknis kegiatan, serta dukungan operasional guna memastikan rangkaian acara terlaksana dengan tertib dan lancar.
+            </p>
+          </article>
+
+          <!-- EXPERIENCE 2 -->
+          <article class="exp-card reveal">
+            <div class="exp-meta">
+              <span class="exp-role-badge">Panitia • Desember 2025</span>
+            </div>
+            <h3 class="exp-title">Bina Desa 2025 – FORMATIF FKIP Universitas Lampung</h3>
+            <p class="exp-desc">
+              Berperan dalam kegiatan pengabdian masyarakat bertema <em>"Transformasi Digital Desa: Membangun Ekosistem E-Ekonomi Lokal Berbasis Teknologi Informasi"</em> di Desa Bumisari, Natar, meliputi koordinasi kepanitiaan, persiapan teknis, dan kelancaran program pemberdayaan.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS SECTION (SOFT SKILLS & DIGITAL/TECHNICAL SKILLS)
+         ====================================================================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">Kompetensi &amp; Keahlian</h2>
+          <p class="section-subtitle">
+            Keterampilan interpersonal serta penguasaan perangkat lunak produktivitas dan desain digital.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- SOFT SKILLS -->
+          <div class="skill-category-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="skill-card-title">Soft Skills</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Communication &amp; Coordination</span>
+              <span class="skill-pill">Teamwork</span>
+              <span class="skill-pill">Time Management</span>
+              <span class="skill-pill">Adaptability</span>
+              <span class="skill-pill">Administration</span>
+            </div>
+          </div>
+
+          <!-- DIGITAL & TECHNICAL SKILLS -->
+          <div class="skill-category-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="skill-card-title">Digital &amp; Technical Skills</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Microsoft Word</span>
+              <span class="skill-pill">Microsoft PowerPoint</span>
+              <span class="skill-pill">Microsoft Excel &amp; Spreadsheet</span>
+              <span class="skill-pill">Google Workspace</span>
+              <span class="skill-pill">Canva</span>
+              <span class="skill-pill">Figma (UI/UX Design)</span>
+              <span class="skill-pill">Social Media Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PORTFOLIO CATEGORIES SECTION (4 KATEGORI GOOGLE DRIVE - DIPERTAHANKAN)
          ====================================================================== -->
     <section class="section" id="portfolio">
       <div class="container">
@@ -1178,7 +1480,7 @@
     </section>
 
     <!-- ======================================================================
-         FEATURED PROJECTS SECTION
+         FEATURED PROJECTS SECTION (DIPERTAHANKAN)
          ====================================================================== -->
     <section class="section section-alt" id="featured">
       <div class="container">
@@ -1186,7 +1488,7 @@
           <span class="section-tag">Featured Projects</span>
           <h2 class="section-title">Karya Pilihan &amp; Eksplorasi</h2>
           <p class="section-subtitle">
-            Beberapa sorotan proyek desain, antarmuka pengguna, dan pengembangan aplikasi web yang terhubung langsung ke file Google Drive.
+            Sorotan proyek desain, antarmuka pengguna, dan pengembangan aplikasi web yang terhubung langsung ke arsip Google Drive.
           </p>
         </div>
 
@@ -1275,69 +1577,134 @@
     </section>
 
     <!-- ======================================================================
-         CERTIFICATES SECTION
+         CERTIFICATES SECTION (7 SERTIFIKAT RESMI TERBARU)
          ====================================================================== -->
     <section class="section" id="certificates">
       <div class="container">
         <div class="section-header center reveal">
           <span class="section-tag">Certificates</span>
-          <h2 class="section-title">Sertifikat &amp; Pelatihan</h2>
+          <h2 class="section-title">Sertifikat &amp; Pencapaian</h2>
           <p class="section-subtitle">
-            Dokumentasi partisipasi pelatihan, workshop, dan program sertifikasi pengembangan kompetensi. Klik tombol di bawah untuk membuka dokumen di Google Drive.
+            Daftar sertifikat kepanitiaan, kegiatan akademik, dan kompetensi resmi. Arsip digital tersedia pada folder sertifikat Google Drive.
           </p>
         </div>
 
         <div class="cert-grid">
           <!-- SERTIFIKAT 1 -->
           <article class="cert-card reveal">
-            <div class="cert-icon-wrap" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-              </svg>
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2026</span>
             </div>
-            <span class="cert-date">Training Program</span>
-            <h3 class="cert-title">UI/UX Design &amp; Digital Prototyping Training</h3>
-            <div>
-              <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                View Certificate
-              </a>
-            </div>
+            <h3 class="cert-title">Sertifikat Penghargaan sebagai Panitia IMPRESSION X SPECTA 2026</h3>
+            <p class="cert-issuer">Kepanitiaan Mahasiswa</p>
           </article>
 
           <!-- SERTIFIKAT 2 -->
           <article class="cert-card reveal">
-            <div class="cert-icon-wrap" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-              </svg>
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2025</span>
             </div>
-            <span class="cert-date">Workshop</span>
-            <h3 class="cert-title">Web &amp; Interactive Technology Workshop</h3>
-            <div>
-              <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                View Certificate
-              </a>
-            </div>
+            <h3 class="cert-title">Sertifikat Panitia Bina Desa 2025</h3>
+            <p class="cert-issuer">FORMATIF FKIP Universitas Lampung</p>
           </article>
 
           <!-- SERTIFIKAT 3 -->
           <article class="cert-card reveal">
-            <div class="cert-icon-wrap" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-              </svg>
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2026</span>
             </div>
-            <span class="cert-date">Certification</span>
-            <h3 class="cert-title">Creative Graphic Design &amp; Digital Media</h3>
-            <div>
-              <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                View Certificate
-              </a>
-            </div>
+            <h3 class="cert-title">Sertifikat Peserta Kegiatan "Tantangan Pedagogi dalam Pendidikan Vokasi"</h3>
+            <p class="cert-issuer">Seminar &amp; Kegiatan Akademik</p>
           </article>
+
+          <!-- SERTIFIKAT 4 -->
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">C2 Advanced</span>
+            </div>
+            <h3 class="cert-title">EF SET English Certificate – Score 77/100 (C2 Advanced)</h3>
+            <p class="cert-issuer">EF Standard English Test</p>
+          </article>
+
+          <!-- SERTIFIKAT 5 -->
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-title">Sertifikat Apresiasi Microsoft Excel &amp; Spreadsheet</h3>
+            <p class="cert-issuer">Pelatihan &amp; Kompetensi Digital</p>
+          </article>
+
+          <!-- SERTIFIKAT 6 -->
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-title">Sertifikat Peserta Kegiatan Akademik Program Studi Pendidikan Teknologi Informasi</h3>
+            <p class="cert-issuer">FKIP Universitas Lampung</p>
+          </article>
+
+          <!-- SERTIFIKAT 7 -->
+          <article class="cert-card reveal">
+            <div class="cert-top">
+              <div class="cert-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-title">Sertifikat Kepesertaan PKKMB Universitas Lampung</h3>
+            <p class="cert-issuer">Universitas Lampung (UNILA)</p>
+          </article>
+        </div>
+
+        <div class="cert-footer-action reveal">
+          <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Buka Folder Sertifikat di Google Drive
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -1352,7 +1719,7 @@
             <span class="section-tag">Contact</span>
             <h2 class="contact-title">Mari Terhubung &amp; Berkolaborasi</h2>
             <p class="contact-desc">
-              Terbuka untuk peluang magang, proyek kolaborasi desain UI/UX, pengembangan web, maupun diskusi seputar teknologi kreatif.
+              Terbuka untuk peluang magang, kegiatan kepanitiaan, administrasi, maupun kolaborasi proyek digital dan pengembangan keterampilan.
             </p>
             <div class="contact-btn-group">
               <a href="mailto:tpratiwi554@gmail.com" class="btn btn-primary">
@@ -1369,6 +1736,20 @@
           </div>
 
           <div class="contact-details">
+            <!-- NAMA -->
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <span>Nama Lengkap</span>
+                <strong>Tyas Syafa Pratiwi</strong>
+              </div>
+            </div>
+
             <!-- EMAIL -->
             <div class="contact-item">
               <div class="contact-icon" aria-hidden="true">
@@ -1391,7 +1772,7 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <span>Phone / WhatsApp</span>
+                <span>WhatsApp</span>
                 <a href="https://wa.me/6282269657643" target="_blank" rel="noopener noreferrer">082269657643</a>
               </div>
             </div>
@@ -1405,7 +1786,7 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <span>Location</span>
+                <span>Lokasi</span>
                 <strong>Bandar Lampung, Indonesia</strong>
               </div>
             </div>
