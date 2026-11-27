@@ -527,15 +527,15 @@
        ========================================================================== */
     .exp-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .exp-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 30px;
+      padding: 28px;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
       display: flex;
@@ -565,13 +565,13 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 14px;
     }
 
     .exp-role-badge {
       font-family: var(--font-heading);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--color-crimson-hover);
       background-color: var(--color-crimson-soft);
@@ -581,14 +581,21 @@
     }
 
     .exp-title {
-      font-size: 1.24rem;
+      font-size: 1.18rem;
       color: #FFFFFF;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+    }
+
+    .exp-location {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-taupe);
+      margin-bottom: 10px;
     }
 
     .exp-desc {
       color: var(--text-secondary);
-      font-size: 0.96rem;
+      font-size: 0.94rem;
     }
 
     /* ==========================================================================
@@ -769,19 +776,19 @@
     }
 
     /* ==========================================================================
-       10. FEATURED PROJECTS SECTION
+       10. FEATURED PROJECTS SECTION (PROYEK DIGITAL SESUAI CV)
        ========================================================================== */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .project-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 30px;
+      padding: 28px;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
       display: flex;
@@ -805,7 +812,7 @@
 
     .project-tag {
       font-family: var(--font-heading);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--color-taupe);
       background-color: var(--color-taupe-soft);
@@ -817,20 +824,20 @@
     }
 
     .project-title {
-      font-size: 1.22rem;
+      font-size: 1.18rem;
       margin-bottom: 10px;
       color: #FFFFFF;
     }
 
     .project-desc {
       color: var(--text-secondary);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       margin-bottom: 24px;
       flex-grow: 1;
     }
 
     /* ==========================================================================
-       11. CERTIFICATES SECTION (7 SERTIFIKAT RESMI - TANPA GAMBAR FIKTIF)
+       11. CERTIFICATES SECTION (6 SERTIFIKAT RESMI SESUAI CV)
        ========================================================================== */
     .cert-grid {
       display: grid;
@@ -890,7 +897,7 @@
     }
 
     .cert-title {
-      font-size: 1.04rem;
+      font-size: 1.02rem;
       line-height: 1.4;
       margin-bottom: 10px;
       color: #FFFFFF;
@@ -900,7 +907,6 @@
     .cert-issuer {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 18px;
     }
 
     .cert-footer-action {
@@ -1055,6 +1061,8 @@
         max-width: 260px;
       }
 
+      .exp-grid,
+      .projects-grid,
       .cert-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1149,9 +1157,9 @@
         <div class="hero-content reveal">
           <p class="hero-greeting">Hello, I'm</p>
           <h1 class="hero-name">Tyas Syafa Pratiwi</h1>
-          <p class="hero-role">Information Technology Education Student</p>
+          <p class="hero-role">Mahasiswa S1 Pendidikan Teknologi Informasi</p>
           <p class="hero-desc">
-            Mahasiswa Pendidikan Teknologi Informasi Universitas Lampung yang berfokus pada pengembangan keterampilan digital, administrasi, koordinasi tim, serta eksplorasi desain UI/UX dan teknologi web.
+            Mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung dengan minat pada bidang administrasi, teknologi informasi, dan pengembangan keterampilan digital. Terbuka terhadap kesempatan kerja baru maupun Work From Home (WFH).
           </p>
           <div class="hero-actions">
             <a href="#portfolio" class="btn btn-primary">
@@ -1161,7 +1169,7 @@
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="05%20CV_Tyas_Syafa_Pratiwi.pdf" download="CV_Tyas_Syafa_Pratiwi.pdf" class="btn btn-outline">
+            <a href="https://drive.google.com/uc?export=download&id=1Zjbcn9rgUaw5WAzkCmUnJkGtFkUDbOON" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -1206,10 +1214,10 @@
         <div class="about-grid">
           <div class="about-text reveal">
             <p>
-              Saya adalah mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung yang memiliki pengalaman dalam kegiatan kepanitiaan dan pengabdian masyarakat. Saya memiliki kemampuan komunikasi, koordinasi, administrasi, serta kerja sama tim yang baik.
+              Mahasiswa S1 Pendidikan Teknologi Informasi Universitas Lampung yang memiliki pengalaman dalam kepanitiaan dan kegiatan pengabdian masyarakat. Memiliki kemampuan komunikasi, koordinasi, administrasi, serta kerja sama tim yang baik.
             </p>
             <p>
-              Terbiasa bekerja secara terstruktur, menyelesaikan tanggung jawab, dan berkoordinasi dengan berbagai pihak. Saya juga memiliki ketertarikan pada bidang teknologi informasi, administrasi, dan pengembangan keterampilan digital untuk terus berkembang secara profesional.
+              Terbiasa menjalankan tanggung jawab dalam kegiatan, bekerja sesuai pembagian tugas, dan beradaptasi dengan lingkungan baru. Memiliki minat pada bidang administrasi, teknologi informasi, dan pengembangan keterampilan digital, serta motivasi yang kuat untuk terus belajar dan memperoleh pengalaman profesional.
             </p>
           </div>
 
@@ -1232,8 +1240,8 @@
                 <span class="info-value">Keguruan dan Ilmu Pendidikan</span>
               </li>
               <li class="info-item">
-                <span class="info-label">Domisili</span>
-                <span class="info-value">Bandar Lampung, Indonesia</span>
+                <span class="info-label">Kemampuan Bahasa</span>
+                <span class="info-value">Indonesia &amp; Inggris (EF SET 77/100 – C2 Advanced)</span>
               </li>
             </ul>
           </aside>
@@ -1242,38 +1250,52 @@
     </section>
 
     <!-- ======================================================================
-         EXPERIENCE SECTION (KEPANITIAAN & PENGABDIAN MASYARAKAT)
+         EXPERIENCE SECTION (PENGALAMAN KEPANITIAAN SESUAI CV)
          ====================================================================== -->
     <section class="section" id="experience">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Experience</span>
-          <h2 class="section-title">Pengalaman Kepanitiaan &amp; Pengabdian</h2>
+          <h2 class="section-title">Pengalaman Kepanitiaan</h2>
           <p class="section-subtitle">
-            Kontribusi aktif dalam organisasi kemahasiswaan dan program pemberdayaan masyarakat berbasis teknologi.
+            Kontribusi aktif dalam kegiatan sosial, organisasi kemahasiswaan, dan program pengabdian masyarakat.
           </p>
         </div>
 
         <div class="exp-grid">
-          <!-- EXPERIENCE 1 -->
+          <!-- EXPERIENCE 1: FORCARE 2026 -->
+          <article class="exp-card reveal">
+            <div class="exp-meta">
+              <span class="exp-role-badge">CO Sie K5 • 6 September 2026</span>
+            </div>
+            <h3 class="exp-title">FORCARE (Formatif Care) 2026 – FORMATIF FKIP Unila</h3>
+            <p class="exp-location">UPTD PSLU Tresna Werdha Natar</p>
+            <p class="exp-desc">
+              Bertugas sebagai CO Sie K5 pada kegiatan sosial bertema <em>"Berbagi dengan Hati, Bergerak Bersama dan Menebarkan Kebahagiaan bagi Sesama"</em> serta berkoordinasi dengan panitia dan seksi terkait untuk kelancaran kegiatan.
+            </p>
+          </article>
+
+          <!-- EXPERIENCE 2: IMPRESSION X SPECTA 2026 -->
           <article class="exp-card reveal">
             <div class="exp-meta">
               <span class="exp-role-badge">Panitia • 2026</span>
             </div>
             <h3 class="exp-title">IMPRESSION X SPECTA 2026</h3>
+            <p class="exp-location">Universitas Lampung</p>
             <p class="exp-desc">
-              Menjalankan tanggung jawab kepanitiaan mahasiswa melalui koordinasi lintas divisi, persiapan teknis kegiatan, serta dukungan operasional guna memastikan rangkaian acara terlaksana dengan tertib dan lancar.
+              Berpartisipasi dalam persiapan, perencanaan, dan pelaksanaan kegiatan mahasiswa. Berkoordinasi dengan anggota tim serta divisi terkait dan menjalankan tanggung jawab operasional sesuai pembagian kerja panitia.
             </p>
           </article>
 
-          <!-- EXPERIENCE 2 -->
+          <!-- EXPERIENCE 3: BINA DESA 2025 -->
           <article class="exp-card reveal">
             <div class="exp-meta">
               <span class="exp-role-badge">Panitia • Desember 2025</span>
             </div>
-            <h3 class="exp-title">Bina Desa 2025 – FORMATIF FKIP Universitas Lampung</h3>
+            <h3 class="exp-title">Bina Desa 2025 – FORMATIF FKIP Unila</h3>
+            <p class="exp-location">Desa Bumisari, Natar</p>
             <p class="exp-desc">
-              Berperan dalam kegiatan pengabdian masyarakat bertema <em>"Transformasi Digital Desa: Membangun Ekosistem E-Ekonomi Lokal Berbasis Teknologi Informasi"</em> di Desa Bumisari, Natar, meliputi koordinasi kepanitiaan, persiapan teknis, dan kelancaran program pemberdayaan.
+              Berpartisipasi dalam kegiatan pengabdian masyarakat bertema <em>"Transformasi Digital Desa: Membangun Ekosistem E-Ekonomi Lokal Berbasis Teknologi Informasi"</em> melalui persiapan teknis lapangan dan koordinasi bersama panitia serta perangkat desa.
             </p>
           </article>
         </div>
@@ -1281,20 +1303,20 @@
     </section>
 
     <!-- ======================================================================
-         SKILLS SECTION (SOFT SKILLS & DIGITAL/TECHNICAL SKILLS)
+         SKILLS SECTION (KETERAMPILAN PERSONAL & TEKNIS SESUAI CV)
          ====================================================================== -->
     <section class="section section-alt" id="skills">
       <div class="container">
         <div class="section-header center reveal">
           <span class="section-tag">Skills</span>
-          <h2 class="section-title">Kompetensi &amp; Keahlian</h2>
+          <h2 class="section-title">Keterampilan Personal &amp; Teknis</h2>
           <p class="section-subtitle">
-            Keterampilan interpersonal serta penguasaan perangkat lunak produktivitas dan desain digital.
+            Kompetensi kerja tim, administrasi kegiatan, serta penguasaan perangkat lunak produktivitas dan pengembangan digital.
           </p>
         </div>
 
         <div class="skills-grid">
-          <!-- SOFT SKILLS -->
+          <!-- KETERAMPILAN PERSONAL -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
               <div class="skill-icon" aria-hidden="true">
@@ -1305,18 +1327,19 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3 class="skill-card-title">Soft Skills</h3>
+              <h3 class="skill-card-title">Keterampilan Personal</h3>
             </div>
             <div class="skill-pills">
-              <span class="skill-pill">Communication &amp; Coordination</span>
-              <span class="skill-pill">Teamwork</span>
-              <span class="skill-pill">Time Management</span>
-              <span class="skill-pill">Adaptability</span>
-              <span class="skill-pill">Administration</span>
+              <span class="skill-pill">Komunikasi &amp; Koordinasi</span>
+              <span class="skill-pill">Kerja Sama Tim</span>
+              <span class="skill-pill">Manajemen Waktu</span>
+              <span class="skill-pill">Administrasi &amp; Pengelolaan Kegiatan</span>
+              <span class="skill-pill">Adaptasi &amp; Tanggung Jawab</span>
+              <span class="skill-pill">Mandiri maupun dalam Tim</span>
             </div>
           </div>
 
-          <!-- DIGITAL & TECHNICAL SKILLS -->
+          <!-- KETERAMPILAN TEKNIS -->
           <div class="skill-category-card reveal">
             <div class="skill-card-header">
               <div class="skill-icon" aria-hidden="true">
@@ -1326,16 +1349,19 @@
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <h3 class="skill-card-title">Digital &amp; Technical Skills</h3>
+              <h3 class="skill-card-title">Keterampilan Teknis</h3>
             </div>
             <div class="skill-pills">
-              <span class="skill-pill">Microsoft Word</span>
-              <span class="skill-pill">Microsoft PowerPoint</span>
+              <span class="skill-pill">Microsoft Word &amp; PowerPoint</span>
               <span class="skill-pill">Microsoft Excel &amp; Spreadsheet</span>
-              <span class="skill-pill">Google Workspace</span>
               <span class="skill-pill">Canva</span>
+              <span class="skill-pill">Google Workspace</span>
               <span class="skill-pill">Figma (UI/UX Design)</span>
-              <span class="skill-pill">Social Media Management</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Adobe Photoshop</span>
+              <span class="skill-pill">Visual Studio Code (VS Code)</span>
+              <span class="skill-pill">Pengelolaan Media Sosial</span>
+              <span class="skill-pill">Work From Home (WFH)</span>
             </div>
           </div>
         </div>
@@ -1351,7 +1377,7 @@
           <span class="section-tag">Portfolio</span>
           <h2 class="section-title">Eksplorasi Karya &amp; Dokumentasi</h2>
           <p class="section-subtitle">
-            Seluruh arsip proyek dikelompokkan ke dalam empat kategori utama yang terhubung langsung ke folder Google Drive masing-masing.
+            Seluruh arsip proyek dikelompokkan ke dalam empat kategori utama yang terhubung langsung ke Google Drive.
           </p>
         </div>
 
@@ -1368,7 +1394,7 @@
                   <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
                 </svg>
               </div>
-              <span class="category-badge">Folder 01</span>
+              <span class="category-badge">Kategori 01</span>
             </div>
             <h3 class="category-title">01 – Design</h3>
             <p class="category-desc">
@@ -1396,14 +1422,14 @@
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <span class="category-badge">Folder 02</span>
+              <span class="category-badge">Kategori 02</span>
             </div>
             <h3 class="category-title">02 – UI/UX Design</h3>
             <p class="category-desc">
               User interface and user experience projects, including interface exploration, layout design, and digital product concepts created using Figma.
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/1aUgXjQpRSxu6fzFrK8t6UFnJGNzxUDLC?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <a href="https://drive.google.com/file/d/16PVQ0bZRZCvn8OxNqz3nwTN1CBdTdaUj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 View Projects
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -1423,14 +1449,14 @@
                   <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
               </div>
-              <span class="category-badge">Folder 03</span>
+              <span class="category-badge">Kategori 03</span>
             </div>
             <h3 class="category-title">03 – Web &amp; Game Development</h3>
             <p class="category-desc">
               Web-based projects and interactive digital experiences, including personal development projects and 3D web-based games.
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <a href="https://drive.google.com/file/d/15eH3p7DsCKqy01cNjn8VjrJNdcvtP0en/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 View Projects
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -1450,14 +1476,14 @@
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                 </svg>
               </div>
-              <span class="category-badge">Folder 04</span>
+              <span class="category-badge">Kategori 04</span>
             </div>
             <h3 class="category-title">04 – Certificates</h3>
             <p class="category-desc">
               Certificates of participation, training programs, workshops, and learning experiences that support my personal and professional development.
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <a href="https://drive.google.com/file/d/1ixtb3IVL6rFS4cFCWnTEScoDLNNl6zWm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 View Projects
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -1480,30 +1506,30 @@
     </section>
 
     <!-- ======================================================================
-         FEATURED PROJECTS SECTION
+         FEATURED PROJECTS SECTION (PROYEK DIGITAL SESUAI CV)
          ====================================================================== -->
     <section class="section section-alt" id="featured">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Featured Projects</span>
-          <h2 class="section-title">Karya Pilihan &amp; Eksplorasi</h2>
+          <span class="section-tag">Proyek Digital</span>
+          <h2 class="section-title">Perancangan Antarmuka &amp; Sistem Informasi</h2>
           <p class="section-subtitle">
-            Sorotan proyek desain, antarmuka pengguna, dan pengembangan aplikasi web yang terhubung langsung ke arsip Google Drive.
+            Perancangan antarmuka (UI/UX) menggunakan Figma sebagai bagian dari pengembangan keterampilan teknologi informasi.
           </p>
         </div>
 
         <div class="projects-grid">
-          <!-- FEATURED PROJECT 1 -->
+          <!-- PROYEK DIGITAL 1: APLIKASI PEMBELAJARAN -->
           <article class="project-card reveal">
             <div class="project-header">
-              <span class="project-tag">Graphic Design</span>
+              <span class="project-tag">UI/UX Design | Figma</span>
             </div>
-            <h3 class="project-title">Visual Campaign &amp; Poster Series</h3>
+            <h3 class="project-title">Aplikasi Pembelajaran</h3>
             <p class="project-desc">
-              Eksplorasi desain komunikasi visual berupa poster publikasi, banner kegiatan, dan identitas visual produk dengan komposisi tipografi modern.
+              Membuat desain antarmuka aplikasi pembelajaran yang terdiri dari halaman Home, Materi, dan Kuis dengan tata letak dan alur penggunaan yang mudah dipahami pengguna.
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/12Qs_uAK6cQny2hC8OfrcaWAMiXFTQgqs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <a href="https://drive.google.com/file/d/16PVQ0bZRZCvn8OxNqz3nwTN1CBdTdaUj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                 View Details
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1513,17 +1539,17 @@
             </div>
           </article>
 
-          <!-- FEATURED PROJECT 2 -->
+          <!-- PROYEK DIGITAL 2: WEBSITE DAN TAMPILAN SISTEM INFORMASI -->
           <article class="project-card reveal">
             <div class="project-header">
-              <span class="project-tag">UI/UX Design</span>
+              <span class="project-tag">UI/UX Design | Figma</span>
             </div>
-            <h3 class="project-title">Digital Product Interface &amp; Prototype</h3>
+            <h3 class="project-title">Website dan Tampilan Sistem Informasi</h3>
             <p class="project-desc">
-              Perancangan antarmuka pengguna dan alur pengalaman (user flow) interaktif berbasis Figma yang berfokus pada kemudahan navigasi dan estetika bersih.
+              Mengembangkan desain tampilan website serta tampilan sistem informasi dengan struktur halaman dan komponen antarmuka yang rapi dan konsisten.
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/1aUgXjQpRSxu6fzFrK8t6UFnJGNzxUDLC?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <a href="https://drive.google.com/file/d/16PVQ0bZRZCvn8OxNqz3nwTN1CBdTdaUj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                 View Details
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1533,37 +1559,17 @@
             </div>
           </article>
 
-          <!-- FEATURED PROJECT 3 -->
+          <!-- PROYEK DIGITAL 3: SIM-PKL SMK -->
           <article class="project-card reveal">
             <div class="project-header">
-              <span class="project-tag">Game Development</span>
+              <span class="project-tag">Mobile &amp; Desktop</span>
             </div>
-            <h3 class="project-title">3D Web-Based Interactive Game</h3>
+            <h3 class="project-title">SIM-PKL SMK (Sistem Informasi PKL SMK)</h3>
             <p class="project-desc">
-              Pengembangan gim interaktif 3D berbasis web yang menggabungkan logika pemrograman, desain lingkungan visual, dan pengalaman bermain di browser.
+              Membuat desain SIM-PKL SMK dalam tampilan mobile dan desktop untuk mendukung pemilihan serta pemantauan tempat Praktik Kerja Lapangan (PKL).
             </p>
             <div>
-              <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                View Details
-                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- FEATURED PROJECT 4 -->
-          <article class="project-card reveal">
-            <div class="project-header">
-              <span class="project-tag">Web Development</span>
-            </div>
-            <h3 class="project-title">Responsive Web Application Project</h3>
-            <p class="project-desc">
-              Pengembangan website responsif dan sistem informasi berbasis web untuk kebutuhan proyek akademik maupun eksplorasi teknologi front-end modern.
-            </p>
-            <div>
-              <a href="https://drive.google.com/drive/folders/13NzQiV8kPyAD5fMagyVOufiTkFvcxpFB?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <a href="https://drive.google.com/file/d/16PVQ0bZRZCvn8OxNqz3nwTN1CBdTdaUj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                 View Details
                 <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1577,7 +1583,7 @@
     </section>
 
     <!-- ======================================================================
-         CERTIFICATES SECTION (7 SERTIFIKAT RESMI TERBARU)
+         CERTIFICATES SECTION (6 SERTIFIKAT RESMI SESUAI CV)
          ====================================================================== -->
     <section class="section" id="certificates">
       <div class="container">
@@ -1585,7 +1591,7 @@
           <span class="section-tag">Certificates</span>
           <h2 class="section-title">Sertifikat &amp; Pencapaian</h2>
           <p class="section-subtitle">
-            Daftar sertifikat kepanitiaan, kegiatan akademik, dan kompetensi resmi. Arsip digital tersedia pada folder sertifikat Google Drive.
+            Daftar sertifikat kepanitiaan, pelatihan, dan kompetensi resmi. Arsip lengkap dapat diakses langsung melalui tautan Google Drive di bawah.
           </p>
         </div>
 
@@ -1614,9 +1620,9 @@
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                 </svg>
               </div>
-              <span class="cert-date">2025</span>
+              <span class="cert-date">2026</span>
             </div>
-            <h3 class="cert-title">Sertifikat Panitia Bina Desa 2025</h3>
+            <h3 class="cert-title">Sertifikat Panitia (CO Sie K5) FORCARE 2026</h3>
             <p class="cert-issuer">FORMATIF FKIP Universitas Lampung</p>
           </article>
 
@@ -1629,10 +1635,10 @@
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                 </svg>
               </div>
-              <span class="cert-date">2026</span>
+              <span class="cert-date">2025</span>
             </div>
-            <h3 class="cert-title">Sertifikat Peserta Kegiatan "Tantangan Pedagogi dalam Pendidikan Vokasi"</h3>
-            <p class="cert-issuer">Seminar &amp; Kegiatan Akademik</p>
+            <h3 class="cert-title">Sertifikat Panitia Bina Desa 2025</h3>
+            <p class="cert-issuer">FORMATIF FKIP Universitas Lampung</p>
           </article>
 
           <!-- SERTIFIKAT 4 -->
@@ -1644,10 +1650,10 @@
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                 </svg>
               </div>
-              <span class="cert-date">C2 Advanced</span>
+              <span class="cert-date">Juli 2026</span>
             </div>
-            <h3 class="cert-title">EF SET English Certificate – Score 77/100 (C2 Advanced)</h3>
-            <p class="cert-issuer">EF Standard English Test</p>
+            <h3 class="cert-title">Sertifikat Peserta Program Belajar Nasional Spectacular Public Speaking "Seni Merespons dengan Bijak untuk Membangun Komunikasi yang Nyaman"</h3>
+            <p class="cert-issuer">Galeria Potensi</p>
           </article>
 
           <!-- SERTIFIKAT 5 -->
@@ -1674,31 +1680,16 @@
                   <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                 </svg>
               </div>
-              <span class="cert-date">2025</span>
+              <span class="cert-date">C2 Advanced</span>
             </div>
-            <h3 class="cert-title">Sertifikat Peserta Kegiatan Akademik Program Studi Pendidikan Teknologi Informasi</h3>
-            <p class="cert-issuer">FKIP Universitas Lampung</p>
-          </article>
-
-          <!-- SERTIFIKAT 7 -->
-          <article class="cert-card reveal">
-            <div class="cert-top">
-              <div class="cert-icon-wrap" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-              </div>
-              <span class="cert-date">2025</span>
-            </div>
-            <h3 class="cert-title">Sertifikat Kepesertaan PKKMB Universitas Lampung</h3>
-            <p class="cert-issuer">Universitas Lampung (UNILA)</p>
+            <h3 class="cert-title">EF SET English Certificate – Skor 77/100 (C2 Advanced)</h3>
+            <p class="cert-issuer">EF Standard English Test</p>
           </article>
         </div>
 
         <div class="cert-footer-action reveal">
-          <a href="https://drive.google.com/drive/folders/1kzVjNqVDyLvGzThOeoShyaqHMH5IIhsJ?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Buka Folder Sertifikat di Google Drive
+          <a href="https://drive.google.com/file/d/1ixtb3IVL6rFS4cFCWnTEScoDLNNl6zWm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Lihat Dokumen Sertifikat di Google Drive
             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
               <polyline points="15 3 21 3 21 9"></polyline>
@@ -1719,7 +1710,7 @@
             <span class="section-tag">Contact</span>
             <h2 class="contact-title">Mari Terhubung &amp; Berkolaborasi</h2>
             <p class="contact-desc">
-              Terbuka untuk peluang magang, kegiatan kepanitiaan, administrasi, maupun kolaborasi proyek digital dan pengembangan keterampilan.
+              Terbuka terhadap kesempatan kerja dan pengalaman baru, bersedia bekerja secara Work From Home (WFH), serta mampu bekerja secara mandiri maupun dalam tim.
             </p>
             <div class="contact-btn-group">
               <a href="mailto:tpratiwi554@gmail.com" class="btn btn-primary">
@@ -1772,7 +1763,7 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <span>WhatsApp</span>
+                <span>Telepon / WhatsApp</span>
                 <a href="https://wa.me/6282269657643" target="_blank" rel="noopener noreferrer">082269657643</a>
               </div>
             </div>
@@ -1786,7 +1777,7 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <span>Lokasi</span>
+                <span>Domisili</span>
                 <strong>Bandar Lampung, Indonesia</strong>
               </div>
             </div>
